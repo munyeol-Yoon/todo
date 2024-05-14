@@ -10,8 +10,8 @@ const App = () => {
     <div className="app-wrapper">
       <Header />
       <TodoForm setTodos={setTodos} />
-      <TodoList title="Working" />
-      <TodoList title="Done" />
+      <TodoList title="Working" todos={todos} setTodos={setTodos} />
+      <TodoList title="Done" todos={todos} setTodos={setTodos} />
     </div>
   );
 };
