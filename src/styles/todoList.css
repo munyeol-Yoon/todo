@@ -6,3 +6,9 @@
   font-size: 20px;
   font-weight: bolder;
 }
+
+.todo-list-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
