@@ -10,7 +10,7 @@ const TodoCard = ({ todo, setTodos, title }) => {
     setTodos((prevTodos) => prevTodos.filter((t) => t.id !== todo.id));
   };
 
-  const completeBtnClickHandler = (e) => {
+  const completeToggleBtnClickHandler = (e) => {
     e.preventDefault();
     if (btnName === "완료") {
       setTodos((prevTodos) =>
@@ -32,7 +32,10 @@ const TodoCard = ({ todo, setTodos, title }) => {
       </div>
       <div className="todo-card-buttons">
         <TodoCardButton btnName="삭제하기" onClick={deleteBtnClickHandler} />
-        <TodoCardButton btnName={btnName} onClick={completeBtnClickHandler} />
+        <TodoCardButton
+          btnName={btnName}
+          onClick={completeToggleBtnClickHandler}
+        />
       </div>
     </div>
   );
