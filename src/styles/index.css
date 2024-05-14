@@ -1,6 +1,7 @@
 @import "./reset.css";
 @import "./header.css";
 @import "./todoForm.css";
+@import "./todoCard.css";
 
 .app-wrapper {
   border: 1px solid black;

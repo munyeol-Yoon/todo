@@ -1,7 +1,7 @@
 import React from "react";
 
-const TodoCardButton = () => {
-  return <div>TodoCardButton</div>;
+const TodoCardButton = ({ btnName }) => {
+  return <button type="submit">{btnName}</button>;
 };
 
 export default TodoCardButton;
