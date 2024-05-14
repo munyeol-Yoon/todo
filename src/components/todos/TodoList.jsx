@@ -12,7 +12,12 @@ const TodoList = ({ title, todos, setTodos }) => {
       <div>
         <h2>{title}</h2>
         {filteredTodos.map((todo) => (
-          <TodoCard key={todo.id} todo={todo} setTodos={setTodos} />
+          <TodoCard
+            key={todo.id}
+            todo={todo}
+            setTodos={setTodos}
+            title={title}
+          />
         ))}
       </div>
     </>
