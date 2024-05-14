@@ -1,5 +1,6 @@
 .todo-form-wrapper {
-  border: 1px solid black;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
 }
 
 .todo-form-container {
@@ -7,4 +8,15 @@
   justify-content: space-between;
   align-items: center;
   padding: 30px;
+}
+
+.todo-form-container > div > label {
+  padding: 10px;
+}
+
+.todo-form-container > div > input {
+  padding-left: 5px;
+  border: 1px solid #d9d9d9;
+  outline: none;
+  caret-color: #767272;
 }
