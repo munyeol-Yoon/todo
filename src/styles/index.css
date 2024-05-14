@@ -2,9 +2,9 @@
 @import "./header.css";
 @import "./todoForm.css";
 @import "./todoCard.css";
+@import "./todoFormButton.css";
 
 .app-wrapper {
-  border: 1px solid black;
   width: 80%;
   margin: 0 auto;
 }
