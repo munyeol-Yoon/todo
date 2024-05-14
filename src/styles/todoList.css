@@ -1,0 +1,8 @@
+.todo-list-wrapper {
+  padding: 15px;
+}
+
+.todo-list-wrapper > h2 {
+  font-size: 20px;
+  font-weight: bolder;
+}

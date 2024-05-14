@@ -9,7 +9,7 @@ const TodoList = ({ title, todos, setTodos }) => {
 
   return (
     <>
-      <div>
+      <div className="todo-list-wrapper">
         <h2>{title}</h2>
         {filteredTodos.map((todo) => (
           <TodoCard

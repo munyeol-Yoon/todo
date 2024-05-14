@@ -3,6 +3,7 @@
 @import "./todoForm.css";
 @import "./todoCard.css";
 @import "./todoFormButton.css";
+@import "./todoList.css";
 
 .app-wrapper {
   width: 80%;
