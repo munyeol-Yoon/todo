@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./components/Header";
 import TodoForm from "./components/todos/TodoForm";
 import TodoList from "./components/todos/TodoList";
 
 const App = () => {
+  const [todos, setTodos] = useState([]);
+
   return (
     <div className="app-wrapper">
       <Header />
-      <TodoForm />
+      <TodoForm setTodos={setTodos} />
       <TodoList title="Working" />
       <TodoList title="Done" />
     </div>
