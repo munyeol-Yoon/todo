@@ -1,0 +1,10 @@
+.todo-form-wrapper {
+  border: 1px solid black;
+}
+
+.todo-form-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
