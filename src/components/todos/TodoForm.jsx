@@ -3,12 +3,28 @@ import "../../styles/index.css";
 import TodoFormButton from "./buttons/TodoFormButton";
 
 const TodoForm = ({ setTodos }) => {
-  const [title, setTitle] = useState("");
-  const [content, setContent] = useState("");
+  const [inputs, setInputs] = useState({
+    title: "",
+    content: "",
+  });
+
+  const { title, content } = inputs;
+
+  const onChange = (e) => {
+    const { name, value } = e.target;
+
+    setInputs({
+      ...inputs,
+      [name]: value,
+    });
+  };
 
   const addTodoHandler = (e) => {
     e.preventDefault();
-    if (!title || !content) return;
+    if (!title || !content) {
+      alert("빈칸은 허용되지 않습니다.");
+      return;
+    }
 
     const newTodo = {
       id: Date.now(),
@@ -18,8 +34,10 @@ const TodoForm = ({ setTodos }) => {
     };
 
     setTodos((prevTodos) => [...prevTodos, newTodo]);
-    setTitle("");
-    setContent("");
+    setInputs({
+      title: "",
+      content: "",
+    });
   };
 
   return (
@@ -30,15 +48,17 @@ const TodoForm = ({ setTodos }) => {
           <input
             type="text"
             id="title"
+            name="title"
             value={title}
-            onChange={(e) => setTitle(e.target.value)}
+            onChange={onChange}
           />
           <label htmlFor="content">내용</label>
           <input
             type="text"
             id="content"
+            name="content"
             value={content}
-            onChange={(e) => setContent(e.target.value)}
+            onChange={onChange}
           />
         </div>
         <TodoFormButton />
